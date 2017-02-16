@@ -1,0 +1,24 @@
+{
+  "name": "happyrachel.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "git":"git add . && git commit -m'add' && git push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/happyrachel/happyrachel.github.io.git"
+  },
+  "keywords": [],
+  "author": "rachel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/happyrachel/happyrachel.github.io/issues"
+  },
+  "homepage": "https://github.com/happyrachel/happyrachel.github.io#readme",
+  "devDependencies": {
+    "webpack": "^2.2.1"
+  }
+}
