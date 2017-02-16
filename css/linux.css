@@ -1,0 +1,110 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background-color: #f3ebdc;
+}
+.header{
+	background-color: teal;
+	/*line-height: 30px;*/
+}
+.header-inner,.footer-inner{
+	min-width: 960px;
+}
+.header h1{
+	line-height: 70px;
+	font-size: 30px;
+	color:white;
+	text-align:center;
+}
+.header h1:hover{
+	color:#ffc37b;
+}
+
+section{
+	width: 770px;
+	margin: 0 auto;
+	background-color: white;
+	box-shadow:0px 0px 5px #919799;
+	padding:45px;
+	padding-top: 30px;
+	padding-bottom: 50px;
+}
+section p{
+	color:#64686a;
+	font-family: "微软雅黑","黑体";
+	font-size: 15px;
+	line-height: 36px;
+}
+section h2{
+	font-family: "宋体";
+	font-size: 20px;
+	color:#f08324;
+	line-height: 50px;
+	text-align:center;
+	margin-bottom: 10px;
+}
+section h3{
+	font-family: "宋体";
+	font-size: 16px;
+	color:#14877E;
+	line-height: 3.5em;
+}
+/*section h4{
+	font-size: 16px;
+	color:#14877E;
+	line-height: 25px;
+}*/
+pre{
+	padding: 15px;
+	background-color: #fff5d7;
+	border-radius: 8px;
+	border:1px solid #ccc;
+	margin:20px 0;
+	opacity:0.5;
+	color:#00a7cf;
+	line-height: 1.5em;
+}
+ul{
+	padding-left: 30px;
+
+}
+ul li{
+	line-height: 20px;
+}
+section p a{
+	text-decoration:none;
+}
+blockquote{
+	background-color: #badce6;
+	border-radius:5px;
+	color:#f59358;
+	padding: 15px 30px;
+	margin-bottom: 20px;
+	opacity:0.6;
+	line-height: 1.5em;
+}
+
+footer{
+	background-image: url(../images/contact_03.jpg);
+	margin-top: 10px;
+}
+.footer-inner{
+	/*height: 90px;*/
+	padding-top: 40px;
+	padding-bottom:60px;
+}
+.footer-inner a{
+	display:block;
+	text-decoration:none;
+	font-family: times;
+	font-size: 18px;
+	font-style:italic;
+	color:#9fa2a3;
+	line-height: 60px;
+	text-align:center;
+}
+.footer-inner a:hover{
+	color:#feafbc;
+}
