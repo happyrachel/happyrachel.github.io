@@ -46,3 +46,26 @@ module.exports = {
 ###添加webpack的插件，也就是babel
 
 babel的官网是 [http://babeljs.io/]（http://babeljs.io/）
+
+点击 Docs下的setup，点击Webpack选项，然后到命令行 粘贴复制这段代码并回车：
+
+```
+npm install --save-dev babel-loader babel-core
+```
+然后去webpack.config.js这个文件中写上这段代码
+
+```
+module: {
+  rules: [
+    { test: /\.js$/, exclude: /node_modules/, use: "babel-loader" }
+  ]
+}
+```
+
+然后在去新建一个文件，名字叫做.babelrc，里面复制一下内容
+
+```
+{
+  "presets": ["env","react"]
+}
+```
