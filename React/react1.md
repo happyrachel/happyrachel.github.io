@@ -9,7 +9,12 @@ G这一集来跑一个 React 的 Hello World ，但是重点我们看一下一�
 
 ### 最简单的 Webpack 配置文件
 
-首先新建一个项目文件夹，然后在该文件夹下，命令行运行 npm init，回车，
+首先新建一个项目文件夹，然后在该文件夹下，命令行运行 npm init，回车，然后命令行输入
+
+```
+npm install webpack -D
+```
+
 然后在项目文件夹下，new file一个文件，名字叫做webpack.config.js,切记名字不可以写错，里面的内容如下
 
 ```
