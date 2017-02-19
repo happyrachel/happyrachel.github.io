@@ -21,7 +21,7 @@ layout: linux
 - Logo.js
 - SignIn.js
 
-###首先写Header.js，其中代码如下
+### 首先写Header.js，其中代码如下
 
 ```
 mport React from 'react';
@@ -45,7 +45,7 @@ export default Header;  //默认导出Header这个类
 
 - 比如从Logo.js引入Logo这个类，其中文件的名字绝对不可以写错
 
-###然后写Logo.js,代码如下
+### 然后写Logo.js,代码如下
 
 ```
  import React from 'react';
@@ -57,7 +57,7 @@ export default Header;  //默认导出Header这个类
    render(){
      let styles ={width:'100px',border:'3px solid #000',borderRadius:"50%"};
      //这是行内样式
-     
+
      return(
        <div>
          <img src={img} style={styles}/>
@@ -94,7 +94,7 @@ output: {
 
 配置了这些文件之后，重启webpack，这样图片就可以加载出来了  
 
-###然后写SignIn.js的代码
+### 然后写SignIn.js的代码
 
  ```
  import React from 'react';
@@ -123,7 +123,7 @@ output: {
  export default SignIn;
  ```
 
-###然后写一下Banner.js的代码，跟其他的基本上一样
+### 然后写一下Banner.js的代码，跟其他的基本上一样
 
  ```
  import React from 'react';
@@ -141,7 +141,7 @@ output: {
  export default Banner;
 ```
 
-###然后写一下Footer.js的代码
+### 然后写一下Footer.js的代码
 
 ```
 import React from 'react';

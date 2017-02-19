@@ -77,7 +77,7 @@ ReactDOM.render(       //render方法  就是把某个dom节点插入到指定�
  )
 ```
 
-JSX(javascript xml)语法，允许我们在JS里直接去写标签
+### JSX(javascript xml)语法，允许我们在JS里直接去写标签
  其他的特点
  1.每一个标签必须有结束标签,像img这种标签，则需要写成<img src="" alt=""/>后面加一个/
  2.jsx元素必须包含在一个闭合的标签内，通常都是用一个<div></div>包含一下

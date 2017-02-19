@@ -49,7 +49,7 @@ module.exports = {
 
 注意：Webpack 已经不仅仅是一个打包器了，它已经发展成一个强大的 build tool 构建工具，里面可以融入大量辅助开发的插件。所以通常我们就是把 babel 作为 Webpack 的功能之一来使用。
 
-###添加webpack的插件，也就是babel
+### 添加webpack的插件，也就是babel
 
 babel的官网是 [http://babeljs.io/]（http://babeljs.io/）
 
