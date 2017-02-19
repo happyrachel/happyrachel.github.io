@@ -1,5 +1,5 @@
 ---
-title: React组件
+title: React组件的写法
 layout: linux
 ---
 
