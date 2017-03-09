@@ -117,3 +117,13 @@ http://localhost:3000/title
 ```
 my title
 ```
+
+前面的回调函数中，console.log 打印字符串，只是出现在后端（服务器端）。前端得不到任何反馈。所以，我们可以把代码做如下修改
+```
+app.get('/title',function(req, res){
+  res.send('my title')
+})
+
+```
+上面代码中 req 是 request **请求** 的简写， res 是 response **响应** 的简写 。
+res.send('Hello World'); 的作用是从后端向前端浏览器返回字符串 Hello World 。
