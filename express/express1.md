@@ -24,6 +24,12 @@ mkdir express-hello
 cd express-hello
 npm init -y
 ```
+
+装包
+```
+npm install --save express
+```
+
 小贴士：一个常见装包错误，如果我们项目文件夹的名和要装的包名同名,是会出现报错信息，此时只需要修改文件夹的名字即可
 
 
@@ -139,3 +145,11 @@ res.send('my title'); 的作用是从后端向前端浏览器返回字符串 my 
 然后，再从 API 的角度来聊聊。前端是 API 的消费者，后端是 API 的 生产者。后台 API 写好之后，默认不运行，只有当前端发送过请求来的 时候才会出发后台 API 代码运行。
 
 当然，在平常开发的时候，我们并没购买刀片机，所有只能是用自己的笔记 本来当刀片机用了。这时候，基本可以认为 express 写的代码就是后端 代码，react 写的代码就是前端代码。
+
+### API的基本格式
+
+```
+app.get('/title',function(req, res){
+  res.send('my title')
+})
+```
