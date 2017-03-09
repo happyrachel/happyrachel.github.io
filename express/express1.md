@@ -126,4 +126,4 @@ app.get('/title',function(req, res){
 
 ```
 上面代码中 req 是 request **请求** 的简写， res 是 response **响应** 的简写 。
-res.send('Hello World'); 的作用是从后端向前端浏览器返回字符串 Hello World 。
+res.send('my title'); 的作用是从后端向前端浏览器返回字符串 my title 。
