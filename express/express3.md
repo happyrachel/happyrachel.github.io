@@ -23,7 +23,7 @@ https://www.mongodb.com/ 是 MongoDB 的官网。http://www.mongoing.com/ 是 Mo
 - Collection: 集合。类似于关系型数据库下的*表*的概念。
 - Document：文档。一个集合中会包含多个文档。文档对应关系型数据库中的 *记录* 这个概念。
 
-举例子来说，一个项目叫 facebook ，那么我们就建立一个c database 来存储这个项目的所有数据。
+举例子来说，一个项目叫 facebook ，那么我们就建立一个database 来存储这个项目的所有数据。
 可以创建多个集合，比如 users 。一个 users 集合中，可以包含多个文档，每个文档中存储一个 user
 的信息（信息可以有多项：email, name, brithday ...）。
 
@@ -89,6 +89,7 @@ $ use digicity
 switched to db digicity
 ```
 
+一般创建的这个数据库的名字跟你项目的名字相同
 下面的输出 `switched to db digicity` 意思是：已经切换到 digicity 这个数据库里面了。
 
 查看数据库有没有创建成功，可以用
