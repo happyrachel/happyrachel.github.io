@@ -140,7 +140,8 @@ db.users.find({})
 代码中比较推荐用 save ，不推荐 update。
 
 ```
- db.users.update({_id: ObjectId("584b62b830a2a2cbf4c4c3f6")}, {username: "billie66", email:"billie@billie.com"})
+ db.users.update({_id: ObjectId("584b62b830a2a2cbf4c4c3f6")},
+ {username: "billie66", email:"billie@billie.com"})
 ```
 
 update 接口中有两个参考，第一个是查询条件，用来定位要更新的是哪一个文档，后面是更新后的数据。
