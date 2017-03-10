@@ -197,3 +197,58 @@ XMLHttpRequest 是发 HTTP 请求的底层机制，是浏览器自带功能。�
 ```
 无法加载后台 http://localhost:3000 . 被请求的资源中没有设置 Access-Control-Allow-Origin 头部。源头设置为 Null ，所以不允许 访问。
 ```
+Access-Control-Allow-Origin 字面意思：访问控制允许来源。服务器上的默认是不允许其他网址（或者网址相同，但是端口号不同）的网站请求资源的，如果需要开通权限，就需要在服务器上做下面的设置。
+```
+Access-Control-Allow-Origin ：*
+```
+
+### 跨域请求的解决方案
+
+解决方案采用： https://github.com/expressjs/cors
+
+cors 是 Cross Origin Resource Share ，安装了这个包就可以完成
+
+保证后台启动状态，现在我们看看当前后台资源的 header 设置，可以用下面的 curl 命令
+```
+$ curl -I http://localhost:3000/
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/html; charset=utf-8
+Content-Length: 11
+ETag: W/"b-sQqNsWTgdUEFt6mb5y4/5Q"
+Date: Thu, 08 Dec 2016 01:51:44 GMT
+Connection: keep-alive
+```
+curl 是专门用来测试 API 的一个命令行工具，-I 选项用来专门活动服务器 返回的 header 。命令返回的信息，就是服务器端被请求资源的的 header 。 很明确是没有 Access-Control-Allow-Origin 这一项的。下面我们安装 cors 这个包，就可以解决这个问题。
+
+具体步骤如下：
+
+到 https://www.npmjs.com/package/cors 可以看到装包命令如下：
+```
+npm install --save cors
+```
+再次提醒：这个包要安装到后台代码中。
+
+在次通过curl -I http://localhost:3000/  命令，就可以看到
+Access-Control-Allow-Origin: *
+这一项了。
+
+
+然后去后台的index.js文件中添加两行代码
+```
+const cors = require('cors')
+app.use(cors());
+```
+
+下面进一步调整 componentWillMount 如下：
+```
+componentWillMount() {
+    let _this=this;
+    axios.get('http://localhost:3000/username').then(function(res){
+       _this.setState({username:res.data.username})
+      // return console.log(res.data.username);
+    })
+  }
+```
+
+前台再次重启前端，既可以看到对应的数据了。
