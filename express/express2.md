@@ -155,3 +155,45 @@ curl: (7) Failed to connect to localhost port 3000: 拒绝连接
 nodemon index.js
 ```
 启动之后在运行curl命令，则可以看到运行结果。
+
+### 安装 axios 发送 http 请求
+现在我们来到前端代码中。引入 axios 。axios 按照[官网](https://github.com/mzabriskie/axios)的说法，它是一个 http client （ http 的客户端），换句话说，它是专门用来发 http 请求的。
+
+axios 是常用的发 http 请求的工具（现在一般不提发 ajax 请求这个说法了）。
+
+首先来进行装包：
+
+```
+npm install --save axios
+```
+把 axios 安装到 react-frontend 这个项目中。
+
+装包之后，就可以到 src/index.js 中去使用了，代码如下
+
+```
+import axios from 'axios';
+```
+
+我们当前的请求不希望是通过按钮来触发，而是希望，页面加载的时候，自动发出 http 请求，向服务要数据，所以，代码非常适合写到生命周期函数中：
+
+```
+componentWillMount() {
+  axios.get('http://localhost:3000/username').then(function(response){
+      return console.log(response);
+    }
+  )
+}
+```
+代码进行到上面，浏览器中用前台请求后台，会在 chrome console 中看到，如下 错误：
+
+```
+XMLHttpRequest cannot load http://localhost:3000/. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'null' is therefore not allowed access.
+```
+这就是跨域请求的问题
+
+### 跨域请求 Access-Control-Allow-Origin
+XMLHttpRequest 是发 HTTP 请求的底层机制，是浏览器自带功能。上面的报错翻译如下：
+
+```
+无法加载后台 http://localhost:3000 . 被请求的资源中没有设置 Access-Control-Allow-Origin 头部。源头设置为 Null ，所以不允许 访问。
+```
