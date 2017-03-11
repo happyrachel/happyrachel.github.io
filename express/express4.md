@@ -107,6 +107,13 @@ model 。所以说　User 就是一个空盒子。而小写的　｀user` 是　
 得到的一个对象，对应一个实际的文档，所以其中会真
 正保存一个用户的实际　username 和 email 数据。
 
+### 小贴士，如何查看数据库中的集合
+- 在启动数据库的前提下$mongod --dbpath=./data/db，登陆后台数据库$ mongo
+- show dbs
+- use react-express-tiger
+- show collections
+
+
 `user.save` 就是把　`user` 中已经有的数据（在内存中），真正保存到　MongoDB
 数据库中（保存到硬盘上）。
 
