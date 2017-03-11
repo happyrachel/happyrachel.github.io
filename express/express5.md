@@ -19,12 +19,13 @@ layout: linux
 首先，保证 mongodb 处于运行状态，然后，通过　mongo-express 查看一下，
 mongodb 中是否有多个用户。
 
-实际工作中，开发者是通过看　[Mongoose 的　API 文档](http://mongoosejs.com/docs/api.html) 来解决这个问题。但是起步阶段，
-还是要先通过教程，来学习一些最基本的使用，后续才会有你能力看　API 文档。
+成熟的工程师，你给他　[Mongoose 的　API 文档](http://mongoosejs.com/docs/api.html)
+他就有能力完成这个任务了。但是起步阶段，
+还是要先通过教程，来学习一些最基本的使用，后续才有能力看　API 文档。
 
 参考：http://haoqicat.com/react-express-api/5-rest-api
 
-修改代码如下：
+到后台代码 index.js文件中，把db.once部分的代码修改如下：
 
 ```
 db.once('open', function() {
@@ -262,36 +263,16 @@ bundle.js:894 Uncaught (in promise) Error: Objects are not valid as a React chil
 
 我们可以使用　ES6 自带的　map 来完成该任务。也可以加载　lodash 的　map 方法。
 
-小贴士：什么是　lodash ?
-lodash 是一个　JS 的库，它里面提供了很多　JS 的基础方法，方便使用　JS 语言。
-使用　lodash 是写　JS 代码的标配。
-小贴士结束
-
-安装　lodash
-
-```
-npm i --save lodash
-```
-
-然后，到　index.js 中导入一下
-
-```js
-import map from 'lodash/fp/map';
-```
-
 
 render 函数做如下调整：
 
 ```js
 render(){
-  const userList = map((user) => {
-    return (
-      <div key={user._id}>
-        {user.username}
-      </div>
-    )
-  }, this.state.users);
-
+  const userList = this.state.users.map(item =>
+        <div key={item._id}>
+          {item.username}
+        </div>
+    );
   return(
     <div>
       { userList }
@@ -311,8 +292,6 @@ src/index.js
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-import map from 'lodash/fp/map';
-
 
 class App extends Component {
   constructor(){
@@ -322,29 +301,29 @@ class App extends Component {
     };
   }
   componentWillMount() {
-    axios.get('http://localhost:3000/users').then((response) => {
-      // console.log(response);
-      this.setState({users: response.data.users});
+    let _this=this;
+    axios.get('http://localhost:3000/users').then(function(res){
+       _this.setState({users:res.data.users})
+      return console.log(res);
     })
   }
   render(){
-    const userList = map((user) => {
-      return (
-        <div key={user._id}>
-          {user.username}
-        </div>
-      )
-    }, this.state.users);
-
+    console.log(this.state.users);
+    // const userList = this.state.users.map(item =>
+    //     <div key={item._id}>
+    //       {item.username}
+    //     </div>
+    // );
     return(
       <div>
-        { userList }
+        {/* { userList } */}
+        {this.state.users.map(item => <div key={item._id} >{item.username}</div>)}
       </div>
     )
   }
 }
 
-ReactDOM.render(<App/>,document.getElementById('app'));
+ReactDOM.render(<App/>,document.getElementById('box'));
 ```
 
 webpack.config.js 如下：
@@ -359,10 +338,10 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        loader: 'babel-loader'
+        use: 'babel-loader'
       }
     ]
   }
@@ -373,8 +352,7 @@ module.exports = {
 
 ```
 {
-  "presets": ["es2015", "react", "stage-0"],
-  "plugins": []
+  "presets": ["env", "react"]
 }
 ```
 
