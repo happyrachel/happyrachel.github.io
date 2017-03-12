@@ -64,6 +64,7 @@ pre{
 	margin:20px 0;
 	color:black;
 	line-height: 1.5em;
+	overflow: scroll;
 }
 ul{
 	padding-left: 30px;
