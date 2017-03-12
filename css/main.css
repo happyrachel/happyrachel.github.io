@@ -12,7 +12,10 @@ a { color: #14877E; text-decoration: none; }
 
 #wrapper { position: relative; min-height: 100%; height: auto !important; }
 
-.wrapper-inside { width: 1000px; margin: 0 auto;}
+.wrapper-inside {
+  width: 1000px;
+  margin: 0 auto;
+}
 .nav ul { margin: 0; padding: 0; float: left; list-style: none; }
 
 .nav ul li { float: left; margin-right: 25px; font-size: 14px; }

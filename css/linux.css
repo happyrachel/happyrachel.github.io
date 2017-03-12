@@ -31,6 +31,10 @@ section{
 	padding-top: 30px;
 	padding-bottom: 50px;
 }
+.highlight .kr{
+	color:red;
+	font-weight: bolder;
+}
 section p{
 	color:#18262d;
 	font-family: "微软雅黑","黑体";
