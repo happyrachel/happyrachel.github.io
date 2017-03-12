@@ -35,6 +35,14 @@ section{
 	color:red;
 	font-weight: bolder;
 }
+.highlight .kd{
+	color:green;
+	font-weight: bolder;
+}
+.highlight .nx{
+	color:deeppink;
+	font-weight: bolder;
+}
 section p{
 	color:#18262d;
 	font-family: "微软雅黑","黑体";
