@@ -12,6 +12,12 @@ a { color: #14877E; text-decoration: none; }
 
 #wrapper { position: relative; min-height: 100%; height: auto !important; }
 
+.book{
+  background-image: url(../images/male.jpg);
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+}
 .wrapper-inside {
   width: 1000px;
   margin: 0 auto;
@@ -33,9 +39,9 @@ a { color: #14877E; text-decoration: none; }
 
 .book { width: 100%; margin: 0 auto; }
 
-.top-large { float: right; width: 535px; margin-top: 75px; font-family: "Crete Round", Georgia, "Times New Roman", Times, serif; }
+.top-large { float: right;width: 50px; margin-top: 75px; font-family: "Crete Round", Georgia, "Times New Roman", Times, serif; }
 
-.top-large .book-title { font-size: 30px; color: #E5533C; margin-top: 35px; }
+.top-large .book-title { font-size: 30px; color: #7d9c9f; margin-top: 35px; }
 
 .top-large .book-author { color: #14877E; font-size: 18px; margin-top: 20px; position: relative; }
 .top-large .book-author a:hover { text-decoration: underline; }
@@ -46,7 +52,7 @@ a { color: #14877E; text-decoration: none; }
 
 .top-large .book-description { color: #333; font-size: 18px; }
 
-.read-btn { background: #F27649; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; display: inline-block; color: #FFF; text-decoration: none; font-family: "myriad-pro", Arial, sans-serif; font-size: 18px; font-weight: bold; padding: 10px 30px; margin: 40px auto 0; margin-right: 20px; }
+.read-btn { background: #F27649; width: 132px;border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; display: inline-block; color: #FFF; text-decoration: none; font-family: "myriad-pro", Arial, sans-serif; font-size: 18px; font-weight: bold; padding: 10px 30px; margin: 40px auto 0; margin-right: 20px; }
 
 .book-image { float: left; margin-top: 75px; width: 450px; }
 
@@ -109,7 +115,7 @@ p.part { font-family: "Crete Round", Georgia, Times New Roman, serif; font-size:
 .name-card.contributor { width: 330px; float: left; min-height: 100px; }
 .name-card.contributor .text { font-size: 13px; line-height: 1.8; }
 
-.divider { margin-top: 50px; min-height: 140px; background: #008080; text-align: center; letter-spacing: 1px; font-size: 30px; font-weight: bold; line-height: 140px; color: #FFF; }
+.divider {min-height: 140px; background: #008080; text-align: center; letter-spacing: 1px; font-size: 30px; font-weight: bold; line-height: 140px; color: #FFF; }
 .divider a { color: #FFF; }
 .divider a:hover { color: #77F0F0; }
 
