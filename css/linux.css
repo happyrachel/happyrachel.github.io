@@ -21,7 +21,9 @@ body{
 .header h1:hover{
 	color:#ffc37b;
 }
-
+strong{
+	color:#130b84;
+}
 section{
 	width: 770px;
 	margin: 0 auto;
