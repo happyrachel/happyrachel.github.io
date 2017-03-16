@@ -45,6 +45,10 @@ section{
 	color:deeppink;
 	font-weight: bolder;
 }
+code.highlighter-rouge {
+    color: #e20303;
+    background-color: #ccc;
+}
 section p{
 	color:#18262d;
 	font-family: "微软雅黑","黑体";
