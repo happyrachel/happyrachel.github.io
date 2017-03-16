@@ -49,6 +49,10 @@ code.highlighter-rouge {
     color: #e20303;
     background-color: #ccc;
 }
+code.highlighter-rouge {
+    font-size: 14px;
+    background-color: rgba(100, 208, 199, 0.42);
+}
 section p{
 	color:#18262d;
 	font-family: "微软雅黑","黑体";
