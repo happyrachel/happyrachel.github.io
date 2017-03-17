@@ -211,17 +211,17 @@ html {
 }
 .hamburger.is-closed .hamb-top {
   -webkit-transition: all 0.35s ease-in-out;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color:  #000002;
   top: 5px;
 }
 .hamburger.is-closed .hamb-middle {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color:  #000002;
   margin-top: -2px;
   top: 50%;
 }
 .hamburger.is-closed .hamb-bottom {
   -webkit-transition: all 0.35s ease-in-out;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color:  #000002;
   bottom: 5px;
 }
 .hamburger.is-closed .hamb-top,
